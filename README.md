@@ -1,13 +1,6 @@
-# NOTE: This is a proof-of-concept. Use it at your own risk, and it's not intended for any sort of production use.
+# NOTE: It's not intended for any sort of production use.
 
-This is an alternative interface to Uniswap V2 contracts deployed on an EVM blockchain. We used ReactJS for the project, with the EthersJS module to connect to the blockchain via metamask in the browser, and Material-UI for the frontend. As it was a static site, we used github pages to host the application.
-
-
-Publishes to [https://ben-haslam.github.io/Alternative-Uniswap-Interface/]()
-
-Check out the blog [here](https://medium.com/clearmatics/how-i-made-a-uniswap-interface-from-scratch-b51e1027ca87)
-
-# Getting Started with Create React App
+This is an alternative interface to Uniswap V2 contracts deployed on an EVM blockchain. I used ReactJS for the project, with the EthersJS module to connect to the blockchain via metamask in the browser, and Material-UI for the frontend. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
