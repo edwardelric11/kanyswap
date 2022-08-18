@@ -141,7 +141,7 @@ export default function CoinDialog(props) {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             variant="outlined"
-            placeholder="Paste Address"
+            placeholder="Paste Token Address"
             error={error !== ""}
             helperText={error}
             fullWidth
@@ -171,7 +171,7 @@ export default function CoinDialog(props) {
 
       <DialogActions>
         <Button autoFocus onClick={submit} color="primary">
-          Enter
+          Confirm Token Address
         </Button>
       </DialogActions>
     </Dialog>

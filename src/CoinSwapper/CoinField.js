@@ -8,18 +8,18 @@ const useStyles = makeStyles((theme) => ({
   container: {
     padding: theme.spacing(1),
     minHeight: "80px",
-    backgroundColor: COLORS.grey[50],
+    backgroundColor: COLORS.blueGrey[50],
     borderRadius: theme.spacing(2),
-    borderColor: COLORS.grey[300],
+    borderColor: COLORS.blueGrey[200],
     borderWidth: "1px",
     borderStyle: "solid",
   },
   container_input: {
     padding: theme.spacing(1),
     minHeight: "68px",
-    backgroundColor: COLORS.grey[50],
+    backgroundColor: COLORS.blueGrey[50],
     borderRadius: theme.spacing(2),
-    borderColor: COLORS.grey[300],
+    borderColor: COLORS.blueGrey[300],
     borderWidth: "1px",
     borderStyle: "solid",
     marginLeft: "50%",
@@ -35,12 +35,16 @@ const useStyles = makeStyles((theme) => ({
   },
   fab: {
     zIndex: "0",
+    backgroundColor: COLORS.cyan[50],
+
   },
   input: {
     ...theme.typography.h5,
     width: "100%",
   },
   inputBase: {
+    color: COLORS.blueGrey[600],
+
     textAlign: "right",
   },
 }));
@@ -163,7 +167,7 @@ export default function CoinField(props) {
         {/* Button */}
         <Grid item xs={3}>
           <Fab
-            size="small"
+            size="medium"
             variant="extended"
             onClick={onClick}
             className={classes.fab}

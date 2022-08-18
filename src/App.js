@@ -6,18 +6,24 @@ import NarBar from "./NavBar/NavBar";
 import CoinSwapper from "./CoinSwapper/CoinSwapper";
 import { Route } from "react-router-dom";
 import { SnackbarProvider } from "notistack";
-import Liquidity from "./Liquidity/Liquidity";
 import { createTheme, ThemeProvider } from "@material-ui/core";
 
 const theme = createTheme({
   palette: {
+
+    background: {
+      default: "#666666",
+      dark: '#212121',
+      paper: "#fff"
+    },
+
     primary: {
-      main: "#ff0000",
+      main: "#6200EE",
       contrastText: "#ffffff",
     },
     secondary: {
       main: "#9e9e9e",
-      contrastText: "#ffffff",
+      contrastText: "#212121",
     },
   },
 });
@@ -33,10 +39,6 @@ const App = () => {
                 <NarBar />
                 <Route exact path="/Alternative-Uniswap-Interface/">
                   <CoinSwapper network={network} />
-                </Route>
-
-                <Route exact path="/Alternative-Uniswap-Interface/liquidity">
-                  <Liquidity network={network} />
                 </Route>
               </div>
             )}

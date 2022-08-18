@@ -9,6 +9,7 @@ import {
 } from "@material-ui/core";
 import SwapVerticalCircleIcon from "@material-ui/icons/SwapVerticalCircle";
 import { useSnackbar } from "notistack";
+
 import LoopIcon from "@material-ui/icons/Loop";
 import {
   getAccount,
@@ -32,21 +33,21 @@ import * as chains from "../constants/chains";
 
 const styles = (theme) => ({
   paperContainer: {
-    borderRadius: theme.spacing(2),
-    padding: theme.spacing(1),
+    borderRadius: theme.spacing(3),
+    padding: theme.spacing(2),
     paddingBottom: theme.spacing(3),
   },
   switchButton: {
     zIndex: 1,
-    margin: "-16px",
-    padding: theme.spacing(0.5),
+    margin: "0px",
+    padding: theme.spacing(1),
   },
   fullWidth: {
     width: "100%",
   },
   title: {
     textAlign: "center",
-    padding: theme.spacing(0.5),
+    padding: theme.spacing(2),
     marginBottom: theme.spacing(1),
   },
   hr: {
@@ -208,7 +209,7 @@ function CoinSwapper(props) {
         setLoading(false);
         enqueueSnackbar("Transaction Failed (" + e.message + ")", {
           variant: "error",
-          autoHideDuration: 10000,
+          autoHideDuration: 3000,
         });
       });
   };
@@ -359,9 +360,9 @@ function CoinSwapper(props) {
               />
             </Grid>
 
-            <hr className={classes.hr} />
+            {/* <hr className={classes.hr} /> */}
 
-            {/* Balance Display */}
+            {/* Balance Display
             <Typography variant="h6">Your Balances</Typography>
             <Grid container direction="row" justifyContent="space-between">
               <Grid item xs={6}>
@@ -374,11 +375,11 @@ function CoinSwapper(props) {
                   {formatBalance(coin2.balance, coin2.symbol)}
                 </Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
 
-            <hr className={classes.hr} />
+            {/* <hr className={classes.hr} /> */}
 
-            {/* Reserves Display */}
+            {/* Reserves Display
             <Typography variant="h6">Reserves</Typography>
             <Grid container direction="row" justifyContent="space-between">
               <Grid item xs={6}>
@@ -391,7 +392,7 @@ function CoinSwapper(props) {
                   {formatReserve(reserves[1], coin2.symbol)}
                 </Typography>
               </Grid>
-            </Grid>
+            </Grid> */}
 
             <hr className={classes.hr} />
 
@@ -416,10 +417,7 @@ function CoinSwapper(props) {
         justifyContent="center"
         alignItems="flex-end"
       >
-        <p>
-        Alternative Uniswap Interface | Get AUT for use in the bakerloo testnet{" "}
-          <a href="https://faucet.bakerloo.autonity.network/">here</a>
-        </p>
+        
       </Grid>
     </div>
   );

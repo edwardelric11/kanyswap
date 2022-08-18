@@ -205,8 +205,8 @@ export async function getAmountOut(
 // This function calls the pair contract to fetch the reserves stored in a the liquidity pool between the token of address1 and the token
 // of address2. Some extra logic was needed to make sure that the results were returned in the correct order, as
 // `pair.getReserves()` would always return the reserves in the same order regardless of which order the addresses were.
-//    `address1` - An Ethereum address of the token to trade from (either a ERC20 token or AUT)
-//    `address2` - An Ethereum address of the token to trade to (either a ERC20 token or AUT)
+//    `address1` - An Ethereum address of the token to trade from (ERC20 Token)
+//    `address2` - An Ethereum address of the token to trade to (ERC20 token)
 //    `pair` - The pair contract for the two tokens
 export async function fetchReserves(address1, address2, pair, signer) {
   try {
